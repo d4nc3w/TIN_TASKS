@@ -1,0 +1,25 @@
+p {
+    font-style: Arial;
+    font-size: large;
+}
+
+h1 {
+    font-style: oblique;
+    font-size: xx-large;
+}
+table{
+    border-collapse: separate;
+    background-color: snow;
+}
+
+th{
+    background-color: lightblue;
+}
+
+ul{
+    list-style-type: armenian;
+}
+
+a {
+    text-decoration: none;
+}

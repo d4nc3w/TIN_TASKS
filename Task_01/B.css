@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+}
+
+form{
+    font-style: arial;
+    font-size: larger;
+}
+
+label {
+    color: white;
+}
+
+legend{
+    color: red;
+}
+
+h1{
+    color: yellow;
+}
+
+.mandatory{
+    color: yellowgreen;
+}
