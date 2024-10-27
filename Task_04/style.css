@@ -1,0 +1,39 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+
+form{
+    width: 40%;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px;
+}
+
+label{
+    text-align: right;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 20px;
+}
+
+input[type="submit"]{
+    width: 30%;
+    padding: 10px;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}  
+
+span{
+    display: block;
+    color: red;
+}
+
+p{
+    font-size: 50px;
+}
