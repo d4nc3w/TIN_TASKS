@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, lightskyblue, #0f86f8);
+  text-align: center;
+}
+
+span {
+  color: red;
+  padding: 10px;
+}
+
+label {
+  font-size: 20px;
+  padding-bottom: 3px;
+}
+
+input{
+  border: none;
+  height: 30px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 20px auto;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px;
+}
+
+input[type="submit"]{
+  background-color: cornflowerblue;
+  border-radius: 20px;
+  width: 50%;
+  margin: 20px auto;
+  color: white;
+}
+
+table {
+  width: 50%;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: whitesmoke;
+}
+
+tr:hover {
+  background-color: aliceblue;
+}
