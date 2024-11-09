@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Home</title>
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+  </head>
+  <body>
+    <h1>User Page</h1>
+    <a class="addBtn" href="/showForm">Add user</a>
+
+    <table>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Birth Year</td>
+        <td>Age</td>
+        <td>Phone Number</td>
+        <td>Email</td>
+      </tr>
+      <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.firstName %></td>
+        <td><%= user.lastName %></td>
+        <td><%= user.birthYear %></td>
+        <td><%= user.age %></td>
+        <td><%= user.phoneNum %></td>
+        <td><%= user.email %></td>
+        <td>
+          <a class="editBtn" href="/editUser/<%= user.phoneNum %>">Edit</a>
+        </td>
+        <td>
+            <a class="deleteBtn" href="/deleteUser/<%= user.phoneNum %>">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: dodgerblue;
+    /*background: linear-gradient(130deg ,blue, pink);*/
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: whitesmoke;
+}
+
+tr:hover {
+    background-color: aliceblue;
+}
+
+.addBtn{
+    background-color: green;
+    color: white;
+}
+
+.deleteBtn{
+    background-color: red;
+    color: black;
+}
+
+.editBtn{
+    background-color: yellow;
+    color: black;
+}
+
+a:link, a:visited {
+    border-radius: 20px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: snow;
+    color: black;
+}
