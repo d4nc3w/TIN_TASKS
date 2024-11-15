@@ -1,4 +1,4 @@
-const repo = require('../database/repository');
+const repo = require('../public/javascripts/database/repository');
 
 repo.getAllData(
     (err, result) => {

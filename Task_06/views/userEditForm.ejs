@@ -4,37 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Add user form</title>
+    <title>Edit User</title>
     <link rel="stylesheet" href="/stylesheets/form.css">
 </head>
 <body>
 <h1>Add user</h1>
-<form method="post" action="/addUser">
+<form method="post" action="/editUser/<%= user.userId %>">
     <label>First name:</label>
     <span id="errFirstName"> <%= errors.firstName %> </span>
-<!--    <input name="firstName" type="text">-->
-    <input type="text" name="firstName" value="<%= users.firstName || '' %>">
+    <input name="firstName" type="text" value="<%= user.firstName %>">
 
     <label>Last name:</label>
     <span id="errLastName"> <%= errors.lastName %> </span>
-<!--    <input name="lastName" type="text">-->
-    <input type="text" name="lastName" value="<%= users.lastName || '' %>">
-
+    <input name="lastName" type="text" value="<%= user.lastName %>">
 
     <label>Birth Year:</label>
     <span id="errBirthYear"> <%= errors.birthYear %> </span>
-<!--    <input name="birthYear" type="number" min="1900" max="2024">-->
-    <input type="number" name="birthYear" min="1900" max="2024" value="<%= users.birthYear || '' %>">
+    <input name="birthYear" type="number" min="1900" max="2024" value="<%= user.birthYear %>">
 
     <label>Phone Number:</label>
     <span id="errPhone"> <%= errors.phoneNum %> </span>
-<!--    <input name="phoneNum" type="text">-->
-    <input type="text" name="phoneNum" value="<%= users.phoneNum || '' %>">
+    <input name="phoneNum" type="text" value="<%= user.phoneNum %>">
 
     <label>Email:</label>
     <span id="errEmail"> <%= errors.email %> </span>
-<!--    <input name="email" type="text">-->
-    <input type="email" name="email" value="<%= users.email || '' %>">
+    <input name="email" type="email" value="<%= user.email %>">
 
     <label>Country of birth</label>
     <select name="countryId" required>
