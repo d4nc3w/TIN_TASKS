@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, lightskyblue, #0f86f8);
+  background: linear-gradient(135deg, lightskyblue, mediumpurple);
   text-align: center;
 }
 
@@ -16,7 +16,6 @@ label {
 }
 
 input{
-  border: none;
   height: 30px;
 }
 
@@ -37,4 +36,24 @@ input[type="submit"]{
   width: 50%;
   margin: 20px auto;
   color: white;
+  border: none;
+}
+
+.addBtn{
+  background-color: green;
+  color: white;
+  margin-right: 20px;
+}
+
+.addBtn:hover{
+  background-color: #006500;
+  color: white;
+}
+
+a:link, a:visited {
+  border-radius: 20px;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }

@@ -1,10 +1,8 @@
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: dodgerblue;
+    background: linear-gradient(135deg, lightskyblue, mediumpurple);
     text-align: right;
-    /*background: linear-gradient(130deg ,blue, pink);*/
-    /*background: linear-gradient(#815481, #fdc0cb);*/
 }
 
 h1{
