@@ -1,32 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Home</title>
-    <link rel='stylesheet' href='/stylesheets/home.css' />
+    <title>Book Library</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/frontEndValidation.js" defer></script>
+    <style>
+      .error {
+        border-color: red;
+      }
+    </style>
   </head>
   <body>
-    <h1>Users</h1>
 
-    <a class="addBtn" href="/showForm">Add user</a>
-    <table>
-      <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Birth Year</td>
-        <td>Age</td>
-        <td>Email</td>
-        <td>Country</td>
-      </tr>
-      <% users.forEach(user => { %>
-      <tr>
-        <td><%= user.userId %></td>
-        <td><%= user.firstName %></td>
-        <td><%= user.birthYear %></td>
-        <td><%= user.age %></td>
-        <td><%= user.email %></td>
-        <td><%= user.countryName %></td>
-      </tr>
-      <% }) %>
-    </table>
+  <h1>Add Book</h1>
+  <form method="POST" action="/addBook" onsubmit="frontEndValidation(event)">
+
+  <label for="title">Title:</label>
+    <input type="text" id="title" name="title">
+    <span id="frontEnd_title_error"></span>
+    <span id="errTitle"> <%= errors.title %> </span>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author">
+    <span id="frontEnd_author_error"></span>
+    <span id="errAuthor"> <%= errors.author %> </span>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="year">
+    <span id="frontEnd_year_error"></span>
+    <span id="errYear"> <%= errors.year %> </span>
+
+    <label for="serialNum">Serial Number:</label>
+    <input type="text" id="serialNum" name="serialNum">
+    <span id="frontEnd_serialNum_error"></span>
+    <span id="errSerialNum"> <%= errors.serialNum %></span>
+
+    <button type="submit">Add Book</button>
+    <span id="frontEnd_general_error"></span>
+    <span id="errGeneral"> <%= errors.general %> </span>
+  </form>
+
+  <br><br>
+  <h1>Book Library</h1>
+  <table>
+    <tr>
+      <td>Id</td>
+      <td>Title</td>
+      <td>Author</td>
+      <td>Year</td>
+      <td>Serial Number</td>
+    </tr>
+    <% books.forEach(book => { %>
+    <tr>
+      <td><%= book.bookId %></td>
+      <td><%= book.title%></td>
+      <td><%= book.author %></td>
+      <td><%= book.year %></td>
+      <td><%= book.serialNum %></td>
+    </tr>
+    <% }) %>
+  </table>
   </body>
+  <script>
+    setInterval(() => {
+      fetch('/newBooks')
+              .then(response => response.json())
+              .then(data => {
+                const table = document.querySelector('table');
+                const newRow = document.createElement('tr');
+                let Id = 7;
+                Id++;
+                newRow.innerHTML =
+                    `<td>${Id}</td><td>${data.title}</td>
+                    <td>${data.author}</td>
+                    <td>${data.year}</td>
+                    <td>${data.serialNum}</td>`;
+                table.appendChild(newRow);
+              })
+              .catch(err => console.error(err));
+      }, 10000);
+  </script>
+
 </html>
